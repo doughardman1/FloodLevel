@@ -88,7 +88,7 @@ def transverseMercatorPlot(elevations, geotransform):
     
     flippedElevations = np.flipud(elevations) # since the plotting happens row-wise from bottom to top, the array needs to be flipped 
 
-    projection = ccrs.OSGB() # whats this for?
+    projection = ccrs.OSGB() 
 
     return flippedElevations
 
