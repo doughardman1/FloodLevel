@@ -1,7 +1,7 @@
 import glob
 
 from osgeo import gdal
-from osgeo import gdalconst #what does this do?
+from osgeo import gdalconst 
 
 import cartopy.crs as ccrs
 
@@ -121,7 +121,6 @@ def plotMap(nparray, title):
     plt.show()
 
 
-#how does this work?
 def floodFill(col, row, mask):
     filled = set()
 
@@ -168,14 +167,11 @@ if __name__ == "__main__":
 
     map = transverseMercatorPlot(topography[1], topography[2]) # np array of correctly oriented lidar elevaions
 
-    #plotMap(map,'lidar')
-
-    flood_fill_50 = np.where(map < 70, 1,0)
+    flood_fill_70 = np.where(map < 70, 1,0)
     x, y = getPixelLocationInArray(topography[2],500105,146605)
     print(x,y)
-    fldModel = floodFill(x,y, flood_fill_50)
+    fldModel = floodFill(x,y, flood_fill_70)
 
     fldModel = transverseMercatorPlot(fldModel,topography[2])
     plotMap(fldModel, '70m')
  
-#IS THIS FLIPPING THE MAP UPSIDE DOWN?
