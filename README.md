@@ -1,9 +1,8 @@
 # FloodLevel
-Terrain processing and flood level in python
+Terrain processing and flood level in python / Me attempting to learn `GDAL` and `osgeo`
+
 
 Takes some LiDAR rasters and performs some geoprocessing on them and then applies a flood fill algorithm to a point at a chosen elevation and plots resulting flood extents
-
-Me attempting to learn GDAL and osgeo
 
 ## To get it running on my ubuntu system
 - install miniconda
